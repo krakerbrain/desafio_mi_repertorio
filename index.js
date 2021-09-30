@@ -30,7 +30,7 @@ http
 
     if (req.url == "/canciones" && req.method === "GET") {
       const registros = await consultar();
-      //res.setHeader("Content-Type", "application/json");
+      res.setHeader("Content-Type", "application/json");
       res.end(JSON.stringify(registros.rows));
     }
 
